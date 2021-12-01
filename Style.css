@@ -1,0 +1,123 @@
+*{box-sizing: border-box;margin: 0;padding: 0;}
+body{font-family: Arial, Helvetica, sans-serif;}
+
+.slider-contain{
+   margin: 10px auto;
+   width: 500px;
+   height: 500px;
+   position: relative;
+}
+
+.slider-contain img{
+   position: absolute;
+   width: 500px;
+   height: 500px;
+   border-radius: 6px;
+   transition: opacity 1s;
+   z-index: 1;
+   opacity: 0;
+}
+
+.slider-contain img.active{
+   opacity: 1;
+}
+
+.slider-contain .slider-num{
+   position: absolute;
+   left: 5px;
+   top: 5px;
+   background-color: rgba(0, 0, 0, 0.6);
+   color: aliceblue;
+   padding: 4px 8px;
+   font-weight: bold;
+   font-size: 16px;
+   z-index: 2;
+   border-radius: 6px;
+}
+
+.slider-controls{
+   width: 500px;
+   margin: auto;
+   overflow: hidden;
+}
+
+.slider-controls .prev,
+.slider-controls .next{
+   width: 20%;
+   background-color: rgb(4, 117, 74);
+   text-align: center;
+   color: aliceblue;
+   cursor: pointer;
+   padding: 5px;
+   font-weight: bold;
+   font-size: 16px;
+   border-radius: 6px;
+   border: 2px solid rgb(4, 117, 74);
+   user-select: none;
+   transition: all .2s;
+}
+
+.slider-controls .prev:hover{
+   background-color: #DDD;
+   color: #333;
+}
+.slider-controls .next:hover{
+   background-color: #DDD;
+   color: #333;
+}
+
+.slider-controls .prev{
+   float: left;
+}
+.slider-controls .next{
+   float: right;
+}
+
+.slider-controls .prev.disabled{
+   background-color: rgba(4, 117, 74,0.5);
+   border: 2px solid transparent;
+   color: aliceblue;
+   cursor: no-drop;
+}
+.slider-controls .next.disabled{
+   background-color: rgba(4, 117, 74,0.5);
+   border: 2px solid transparent;
+   color: aliceblue;
+   cursor: no-drop;
+}
+
+.slider-controls .indicators{
+   width: 60%;
+   overflow: hidden;
+   float: left;
+}
+
+.slider-controls .indicators ul{
+   width: 100%;
+   list-style: none;
+   overflow: hidden;
+   text-align: center;
+}
+
+.slider-controls .indicators ul li{
+   display: inline-block;
+   background-color: #DDD;
+   color: #333;
+   /* width: 20%; */
+   font-weight: bold;
+   text-align: center;
+   padding: 7px 8px;
+   margin: 0 2px;
+   border-radius: 6px;
+   cursor: pointer;
+   transition: all .2s;
+}
+
+.slider-controls .indicators ul li.active{
+   background-color: rgba(4, 117, 74);
+   color: aliceblue;
+}
+.slider-controls .indicators ul li:hover{
+   background-color: rgba(4, 117, 74);
+   color: aliceblue;
+}
